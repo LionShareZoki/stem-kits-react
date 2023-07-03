@@ -1,0 +1,19 @@
+.badge{
+  width: 42px;
+  height: 42px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.badge__top-text{
+  font-size: var(--text-size-1);
+  font-weight: var(--text-weight-bold);
+}
+
+.badge__botom-text{
+  font-size: var(--text-size-2);
+  font-weight: var(--text-weight-bold);
+}
