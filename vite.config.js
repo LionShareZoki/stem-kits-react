@@ -1,7 +1,15 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import { defineConfig, createLogger } from 'vite';
+import react from '@vitejs/plugin-react';
+import { reactScopedCssPlugin } from 'rollup-plugin-react-scoped-css';
 
-// https://vitejs.dev/config/
-export default defineConfig({
-  plugins: [react()],
-})
+export default defineConfig(() => {
+  const logger = createLogger();
+
+  return {
+    customLogger: logger,
+    plugins: [
+      react(),
+      reactScopedCssPlugin(),
+    ],
+  };
+});
