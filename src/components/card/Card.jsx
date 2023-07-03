@@ -20,13 +20,13 @@ function CardPrice({
     );
   }
   return (
-    <>
+    <div className="prices__discount-prices">
       <div className="card__prices">
         <strike style={style}><p style={style} className="prices__price">{`kn${price}`}</p></strike>
         <p style={style} className="prices__discounted-price">{`kn${price - price * discount}`}</p>
       </div>
       <p style={style} className="prices__discount">{`Limited ${discount * 100}% discount`}</p>
-    </>
+    </div>
   );
 }
 
@@ -46,8 +46,10 @@ function Card({
         ? <div className="card__image--placeholder" />
         : <img src={image} alt={title} className="card__image" />}
       <div className="card__content">
-        <h3 style={{ color: primaryColor }} className="card__title">{title}</h3>
-        <p className="card__description">{description}</p>
+        <div className='"card__title-description'>
+          <h3 style={{ color: primaryColor }} className="card__title">{title}</h3>
+          <p className="card__description">{description}</p>
+        </div>
         <CardPrice price={price} discount={discount} foregroundColor={primaryColor} />
         <div className="card__buttons">
           <Button
@@ -56,7 +58,7 @@ function Card({
             foregroundColor={secondaryColor}
           />
           <Badge
-            topText="Ages"
+            topText="AGES"
             bottomText={`${age}+`}
             backgroundColor={primaryColor}
             foregroundColor={secondaryColor}

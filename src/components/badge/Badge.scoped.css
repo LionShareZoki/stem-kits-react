@@ -1,6 +1,6 @@
 .badge{
-  width: 42px;
-  height: 42px;
+  width: 49px;
+  height: 49px;
   border-radius: 8px;
   display: flex;
   flex-direction: column;
@@ -9,11 +9,13 @@
 }
 
 .badge__top-text{
-  font-size: var(--text-size-1);
-  font-weight: var(--text-weight-bold);
+  font-size: var(--text-size-0);
+  font-weight: var(--text-weight-regular);
+  line-height: 15px;
 }
 
 .badge__botom-text{
   font-size: var(--text-size-2);
   font-weight: var(--text-weight-bold);
+  line-height: 21px;
 }

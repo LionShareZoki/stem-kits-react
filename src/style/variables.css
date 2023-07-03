@@ -1,9 +1,11 @@
 :root {
+  --text-size-0: 10px;
   --text-size-1: 14px;
   --text-size-2: 16px;
   --text-size-3: 24px;
 
   --text-weight-thin: 200;
+  --text-weight-regular: 400;
   --text-weight-medium: 500;
   --text-weight-bold: 800;
 }
