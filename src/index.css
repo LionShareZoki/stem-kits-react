@@ -7,3 +7,41 @@
   margin: 0;
   padding: 0;
 }
+.header{
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 9px;
+    text-align: center;
+    padding: 12px;
+}
+.header h1 {
+  font-size: 30px;
+  line-height: 30px;
+  color: rgb(38, 38, 38);
+  font-weight: 600;
+}
+.cards {
+  margin-top: 35px;
+  margin-bottom: 38px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 30px;
+}
+.footer {
+  height: 50px;
+  display: flex; 
+  align-items: center;
+  justify-content: center; 
+  flex-direction: column;
+  width: 139px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+@media screen and (max-width: 670px) {
+  .header h1 {
+    font-size: 20px;
+  }
+}
