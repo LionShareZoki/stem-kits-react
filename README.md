@@ -9,6 +9,7 @@ This application was built using Vite and React.
 ## Features
 - Each kit card includes an image, title, description, price, discount percentage, and age recommendation.
 - Dynamically add more kits to the displayed list.
+- New kits are randomly generated.
 - Loading spinner displayed while fetching and rendering new kits.
 - Responsive design.
 
