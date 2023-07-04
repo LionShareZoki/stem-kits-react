@@ -12,6 +12,9 @@ function CardPrice({
     color: foregroundColor,
   };
 
+  const parsedPrice = parseFloat(price.replace(',', ''));
+  const parsedDiscount = parseFloat(discount);
+
   if (!discount) {
     return (
       <div style={style} className="card__prices">
@@ -19,11 +22,14 @@ function CardPrice({
       </div>
     );
   }
+
+  const discountedPrice = parsedPrice - parsedPrice * parsedDiscount;
+
   return (
     <div className="prices__discount-prices">
       <div className="card__prices">
         <strike style={style}><p style={style} className="prices__price">{`kn${price}`}</p></strike>
-        <p style={style} className="prices__discounted-price">{`kn${price - price * discount}`}</p>
+        <p style={style} className="prices__discounted-price">{`kn${discountedPrice.toFixed(2)}`}</p>
       </div>
       <p style={style} className="prices__discount">{`Limited ${discount * 100}% discount`}</p>
     </div>
@@ -46,7 +52,7 @@ function Card({
         ? <div className="card__image--placeholder" />
         : <img src={image} alt={title} className="card__image" />}
       <div className="card__content">
-        <div className='"card__title-description'>
+        <div className="card__title-description">
           <h3 style={{ color: primaryColor }} className="card__title">{title}</h3>
           <p className="card__description">{description}</p>
         </div>
