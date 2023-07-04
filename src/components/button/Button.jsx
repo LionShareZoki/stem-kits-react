@@ -1,7 +1,9 @@
 import React from 'react';
 import './Button.scoped.css';
 
-function Button({ text, backgroundColor, foregroundColor }) {
+function Button({
+  text, backgroundColor, foregroundColor, onClick,
+}) {
   return (
     <button
       type="button"
@@ -9,6 +11,7 @@ function Button({ text, backgroundColor, foregroundColor }) {
         backgroundColor,
         color: foregroundColor,
       }}
+      onClick={onClick}
     >
       {text}
     </button>
